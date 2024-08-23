@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="test.css"> -->
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>AlertFlame</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><i class="fas fa-fire"></i> AlertFlame</a>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="#home" data-target="home"><i class="fas fa-home"></i> Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#features" data-target="features"><i class="fas fa-cogs"></i> Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#subscription" data-target="subscription"><i class="fas fa-exclamation-triangle"></i> Subscription</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#support" data-target="support"><i class="fas fa-headset"></i> Support</a>
+                </li>
+            </ul>
+            <div class="nav-right">
+                <a href="loginpage.html" class="user-profile"><i class="fas fa-user-circle"></i> Login/Signup</a>
+            </div>
+        </div>
+    </nav>
+    <div id="home" class="section">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <h1 class="text-center">AlertFlame works the way you do</h1>
+                    <p class="text-center">From a one-click installation to thousands possibilities for your set-up, AlertFlame evolves with your needs. Home, small office, large shop, outdoor organization... We got you covered.</p>
+                    <button class="btn btn-default" type="button">Subscribe</button>
+                </div>
+                <div class="slide">
+                    <h1 class="text-center">AlertFlame works on its own</h1>
+                    <p class="text-center">Thanks to a unique high-end 24/7 video buffering technology coupled with a secured recordings synchronization, AlertFlame can work on its own. You will never lose sight of an event ever again.</p>
+                    <button class="btn btn-default" type="button">Subscribe</button>
+                </div>
+                <div class="slide">
+                    <h1 class="text-center">Video security made easy</h1>
+                    <p class="text-center">Cutting-edge video technology combined with easy-to-use interface makes AlertFlame, the industry leading software.</p>
+                    <button class="btn btn-default" type="button">Subscribe</button>
+                </div>
+                <div class="slide">
+                    <h1 class="text-center">Easily protect what's precious to you</h1>
+                    <p class="text-center">Protect your business, your home or your family. Check on them whenever you want and wherever you are with our PC, Mobile or Tablet application.</p>
+                    <button class="btn btn-default" type="button">Subscribe</button>
+                          </div>
+            </div>
+            <div class="navigation-buttons">
+                <button class="owl-prev">‹</button>
+                <button class="owl-next">›</button>
+            </div>
+        </div>
+    </div>
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <div id="features" class="section">
+
+
+    </div>
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$44 -->
+    <h1 style="text-align: center;">Pricing</h1>
+    <p style="text-align: center;">Every paid plan is a one-time payment for a perpetual license and includes two years of ugprades</p>
+    <div id="subscription" class="section">
+        
+        <div class="box"> 
+            <div class="box-content">
+               <header><h2>Free</h2><h3>............                </h3></header> 
+            <p>2 video sources<br>Watermark<br>5 notifications / day<br>Community support </p>
+            <button class="btn btn-default" type="button">Subscribe</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <header><h2>Basic<h3>299 INR</h3></h2></header>
+            <p>2 video sources<br>Watermark<br>5 notifications / day<br>Community support </p>
+            <button class="btn btn-default" type="button">Subscribe</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <header><h2>Premium</h2><h3>499 INR</h3></header>
+            <p>2 video sources<br>Watermark<br>5 notifications / day<br>Community support </p>
+            <button class="btn btn-default" type="button">Subscribe</button>
+            </div>
+            
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <header><h2>Pro</h2><h3>799 INR</h3></header>
+            <p>2 video sources<br>Watermark<br>5 notifications / day<br>Community support </p>
+            <button class="btn btn-default" type="button">Subscribe</button>
+        </div>
+
+    </div>
+    </div>
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <h1 style="text-align: center;">Support
+        What can we help you with?</h1>
+    <div id="support" class="section"></div>  
+    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.nav-iteam');
+    const sections = document.querySelectorAll('.section');
+    
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+
+            // Remove active class from all links
+            links.forEach(link => link.classList.remove('active'));
+            // Add active class to the clicked link
+            link.classList.add('active');
+
+            // Scroll smoothly to the target section
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+    </script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const slidesContainer = document.querySelector('.slides');
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const offset = -index * 100; // Offset in percentage
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    function previousSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    // Automatically advance slides every 5 seconds
+    const slideInterval = setInterval(nextSlide, 5000);
+
+    // Handle swipe gestures for manual control
+    let startX;
+
+    function handleTouchStart(event) {
+        startX = event.touches[0].clientX;
+    }
+
+    function handleTouchMove(event) {
+        if (startX === undefined) return;
+
+        const currentX = event.touches[0].clientX;
+        const diffX = startX - currentX;
+
+        if (diffX > 50) {
+            nextSlide();
+            startX = undefined; // End swipe
+        } else if (diffX < -50) {
+            previousSlide();
+            startX = undefined; // End swipe
+        }
+    }
+
+    // Add event listeners for swipe
+    slidesContainer.addEventListener('touchstart', handleTouchStart);
+    slidesContainer.addEventListener('touchmove', handleTouchMove);
+
+    // Add event listeners for navigation buttons
+    document.querySelector('.owl-prev').addEventListener('click', previousSlide);
+    document.querySelector('.owl-next').addEventListener('click', nextSlide);
+});
+
+    </script>
+</body>
+</html>

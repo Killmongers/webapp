@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div id="home" class="section">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <h1 class="text-center">Netcam Studio works the way you do</h1>
+                    <p class="text-center">From a one-click installation to thousands possibilities for your set-up, Netcam Studio evolves with your needs. Home, small office, large shop, outdoor organization... We got you covered.</p>
+                    <button class="btn btn-default" type="button">Download</button>
+                </div>
+                <div class="slide">
+                    <h1 class="text-center">Netcam Studio works on its own</h1>
+                    <p class="text-center">Thanks to a unique high-end 24/7 video buffering technology coupled with a secured recordings synchronization, Netcam Studio can work on its own. You will never lose sight of an event ever again.</p>
+                    <button class="btn btn-default" type="button">Download</button>
+                </div>
+                <div class="slide">
+                    <h1 class="text-center">Video security made easy</h1>
+                    <p class="text-center">Cutting-edge video technology combined with easy-to-use interface makes Netcam Studio, the industry leading software.</p>
+                    <button class="btn btn-default" type="button">Download</button>
+                </div>
+                <div class="slide">
+                    <h1 class="text-center">Easily protect what's precious to you</h1>
+                    <p class="text-center">Protect your business, your home or your family. Check on them whenever you want and wherever you are with our PC, Mobile or Tablet application.</p>
+                    <button class="btn btn-default" type="button">Download</button>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button class="owl-prev">‹</button>
+                <button class="owl-next">›</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const slidesContainer = document.querySelector('.slides');
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const offset = -index * 100; // Offset in percentage
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    function previousSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    // Automatically advance slides every 5 seconds
+    const slideInterval = setInterval(nextSlide, 5000);
+
+    // Handle swipe gestures for manual control
+    let startX;
+
+    function handleTouchStart(event) {
+        startX = event.touches[0].clientX;
+    }
+
+    function handleTouchMove(event) {
+        if (startX === undefined) return;
+
+        const currentX = event.touches[0].clientX;
+        const diffX = startX - currentX;
+
+        if (diffX > 50) {
+            nextSlide();
+            startX = undefined; // End swipe
+        } else if (diffX < -50) {
+            previousSlide();
+            startX = undefined; // End swipe
+        }
+    }
+
+    // Add event listeners for swipe
+    slidesContainer.addEventListener('touchstart', handleTouchStart);
+    slidesContainer.addEventListener('touchmove', handleTouchMove);
+
+    // Add event listeners for navigation buttons
+    document.querySelector('.owl-prev').addEventListener('click', previousSlide);
+    document.querySelector('.owl-next').addEventListener('click', nextSlide);
+});
+
+    </script>
+</body>
+</html>
+ 

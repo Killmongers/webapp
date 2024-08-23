@@ -1,0 +1,181 @@
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    color: #fff; /* White text color */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Optional: add blur effect to the background */
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #fff; /* White text color */
+}
+
+.navbar .logo i {
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-item a {
+    color: #fff; /* White text color */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-item a i {
+    margin-right: 8px;
+}
+
+.nav-right {
+    margin-left: auto;
+}
+
+.nav-right a {
+    color: #fff; /* White text color */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-right a i {
+    margin-right: 8px;
+}
+
+/* Section Styles */
+
+/* Home Section Specific */
+#home {
+    background: transparent; /* Fully transparent background */
+}
+
+/* Features, Subscription, Support Sections */
+#features, #subscription, #support {
+    background: transparent; /* Fully transparent background */
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+    background: transparent; 
+    border-right: 1px solid rgba(0, 0, 0, 0.1); 
+    color: #fff;
+}
+
+.slide:last-child {
+    border-right: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff; /* White text color */
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent blue background */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+}
+
+.btn:hover {
+    background-color: rgba(0, 123, 255, 1); /* Solid blue on hover */
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.navigation-buttons button {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    border: none;
+    color: #fff; /* White text color */
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navigation-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+/* Scroll Link Active Styles */
+.nav-item a.active {
+    font-weight: bold;
+    border-bottom: 2px solid rgba(0, 123, 255, 0.8); /* Semi-transparent active border */
+}
+.slide h1 {
+    font-size: 48px; /* Increase font size for the header */
+    margin: 0 0 20px; /* Adds space below the heading */
+    line-height: 1.2; /* Improves readability */
+}
+.slide p {
+    font-size: 24px; /* Increase font size for the paragraph */
+    line-height: 1.6; /* Improves readability */
+    margin: 0 0 20px; /* Adds space below the paragraph */
+}
+.slide .btn {
+    font-size: 18px; /* Increase font size for the button text */
+    padding: 12px 24px; /* Adds padding inside the button */
+    border-radius: 5px; /* Rounds the button corners */
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent blue background */
+    color: #fff; /* White text color */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
